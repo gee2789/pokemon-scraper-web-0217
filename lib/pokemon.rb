@@ -2,10 +2,15 @@ require 'pry'
 class Pokemon
   @@all = []
 
-  attr_accessor :id, :name, :type, :db
+  DEFAULT_HP = 60
+  attr_accessor :id, :name, :type, :hp, :db
 
   def initialize(id:, name:, type:, db:)
-  @id, @name, @type, @db = id, name, type, db
+    @id = idea
+    @name = name
+    @type = type
+    @hp = DEFAULT_HP
+    @db = db
   end
 
   def self.save(name, type, db)
